@@ -1,0 +1,47 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  font-family: 'Poppins' Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: #000;
+  background-color: #ffffff;
+  
+  margin: 0;
+  padding: 18px 0px;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.MarqueeFade{
+  mask-image: linear-gradient(
+    to right,
+    rgba(0, 0, 0, 0),
+    rgba(0, 0, 0, 1) 10%,
+    rgba(0, 0, 0, 1) 90%,
+    rgba(0, 0, 0, 0)
+  );
+}
+
+.hideScroll::-webkit-scrollbar{
+  width: 0;
+}
+
+.editScroll::-webkit-scrollbar{
+  background: rgba(189, 189, 189, 0.426);
+  width: 10px;
+  border-radius: 10px;
+  color: aqua;
+}
+
+.editScroll::-webkit-scrollbar-thumb{
+  background: #EB0029;
+  border-radius: 10px;
+}
