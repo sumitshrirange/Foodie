@@ -18,17 +18,11 @@ const Header = () => {
 
   const { count } = useContext(CountContext);
 
-  const [showCart, setShowCart] = useState(false);
-
-  const Toggle = () => {
-    setShowCart(!showCart);
-  };
-
   const dispatch = useDispatch();
 
   return (
     <header>
-      <nav className="fixed lg:static bg-[#ffffffc8] backdrop-blur-md lg:bg-[transparent] z-20 top-0 left-0 w-full py-3 lg:py-0 px-4 lg:px-0 flex items-center justify-between">
+      <nav className="w-full flex items-center justify-between">
         <Link to={""}>
           <img className="w-24 cursor-pointer" src={myLogo} alt="foodie-logo" />
         </Link>
@@ -62,12 +56,14 @@ const Header = () => {
               <RiSearchLine className="cursor-pointer" />
             </div>
 
-            <div onClick={Toggle} className="flex items-center cursor-pointer">
-              <RiShoppingBagLine />
-              <span className="select-none text-[8px] mb-1.5 -ml-1.5 bg-main text-white w-auto px-1 rounded-full">
-                {count}
-              </span>
-            </div>
+            <Link to={"/cart"}>
+              <div className="flex items-center cursor-pointer">
+                <RiShoppingBagLine />
+                <span className="select-none text-[8px] mb-1.5 -ml-1.5 bg-main text-white w-auto px-1 rounded-full">
+                  {count}
+                </span>
+              </div>
+            </Link>
 
             <Link to={"/signup"}>
               <button
@@ -81,7 +77,6 @@ const Header = () => {
           </div>
         </div>
       </nav>
-      <Cart conditon={Toggle} show={showCart} set={() => setShowCart(false)} />
     </header>
   );
 };

@@ -44,8 +44,8 @@ const Login = () => {
           className="flex flex-col gap-4 items-center"
         >
           <h3 className="text-3xl font-semibold">Welcome back!</h3>
-          <p className="text-xs mb-3 -mt-3">
-            Log in to enjoy our food without <br /> any extra delivery charges!
+          <p className="text-xs mb-3 -mt-3 text-center w-60">
+            Log in to enjoy our food without any extra delivery charges!
           </p>
 
           <div className="flex items-center cursor-pointer justify-center gap-2 border px-2 w-80 h-9">

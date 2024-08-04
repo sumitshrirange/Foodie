@@ -5,7 +5,7 @@ import qualityImg from "/src/assets/quality.png";
 
 const Services = () => {
   return (
-    <div className="mt-14">
+    <div className="mt-14 text-center w-full">
       <span className="text-main tracking-widest text-xs font-medium">
         WHAT WE SERVE
       </span>

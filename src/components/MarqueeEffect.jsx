@@ -14,7 +14,7 @@ const MarqueeEffect = () => {
   ];
 
   return (
-    <div className="mt-8 mb-2 MarqueeFade">
+    <div className="mt-8 mb-2 MarqueeFade w-full">
       <Marquee autoFill>
         {dishes.map((item) => (
           <ul key={item.id}>

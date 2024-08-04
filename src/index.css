@@ -11,8 +11,11 @@
   color: #000;
   background-color: #ffffff;
   
+  height: 100%;
+  width: 100%;
   margin: 0;
   padding: 18px 0px;
+  box-sizing: border-box;
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;

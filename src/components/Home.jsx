@@ -11,18 +11,18 @@ import GetApp from "./GetApp";
 
 const Home = () => {
   return (
-    <div className="mt-12 lg:mt-0">
+    <div className="w-full">
       <Marquee />
-      <div className="flex flex-col-reverse items-center justify-center lg:flex-row">
-        <div className="flex flex-col gap-6 lg:gap-10 place-items-center lg:place-items-start mb-14">
+      <div className="flex flex-col-reverse items-center w-full justify-center lg:flex-row">
+        <div className="flex text-center flex-col gap-6 lg:gap-10 place-items-center lg:place-items-start mb-14">
           <img className="w-40" src={topImg} alt="" />
           <h1 className="lg:text-6xl text-5xl font-bold font-Rubik lg:text-left">
             Claim Best Offer on Fast
             <span className="font-Lobster italic text-main"> Food</span> &
             <span className="font-Lobster italic text-main"> Restaurants</span>
           </h1>
-          <p className="text-left text-sm lg:text-base">
-            Our job is to filling your tummy with delicious food <br /> and with
+          <p className="lg:text-left text-sm lg:text-base w-80 lg:w-fit">
+            Our job is to filling your tummy with delicious food <br className="lg:block hidden" /> and with
             fast and free delivery.
           </p>
           <div className="flex gap-5">

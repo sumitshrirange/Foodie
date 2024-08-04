@@ -51,8 +51,8 @@ const SignUp = () => {
           className="flex flex-col gap-4 items-center"
         >
           <h3 className="text-3xl font-semibold">Create an Account</h3>
-          <p className="text-xs mb-3 -mt-3">
-            Create an account to enjoy our food without <br /> any extra
+          <p className="text-xs mb-3 -mt-3 w-72 text-center">
+            Create an account to enjoy our food without any extra
             delivery charges!
           </p>
 

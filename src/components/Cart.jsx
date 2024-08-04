@@ -2,8 +2,10 @@ import React from "react";
 import { IoMdClose } from "react-icons/io";
 import CartItem from "./CartItem";
 import { useSelector } from "react-redux";
+import { Link } from "react-router-dom";
+import FoodOrderImg from '/src/assets/food-order-2.jpg'
 
-const Cart = ({ show, set }) => {
+const Cart = () => {
   const cartItems = useSelector((state) => state.cart.carts);
   console.log(cartItems);
 
@@ -14,23 +16,16 @@ const Cart = ({ show, set }) => {
   );
 
   return (
-    <div>
-      <div
-        className={` ${
-          show
-            ? "translate-x-0 lg:right-[130px] opacity-100"
-            : "translate-x-full lg:opacity-10"
-        } duration-300 ease-in-out z-20 fixed right-0 top-0 w-full lg:w-[27vw] lg:shadow-2xl h-full bg-white lg:bg-[#fbfbfb] px-5 lg:py-5 mt-14`}
-      >
+    <div className="w-full lg:flex items-center justify-evenly">
+      <div className="lg:w-[450px] py-5">
         <div className="flex justify-between items-center my-2">
-          <span className="text-xl font-semibold">My Order</span>
-          <IoMdClose
-            onClick={set}
-            className="border border-darkgray p-1 text-2xl rounded-full hover:text-main duration-300 hover:border-main cursor-pointer"
-          />
+        <span className="text-main lg:text-[#d65600] tracking-wide text-sm lg:mb-3 lg:ml-48 font-medium">MY ORDER</span>
+        <Link to={"/menu"}>
+            <IoMdClose className="border lg:hidden border-darkgray p-1 text-2xl rounded-full hover:text-main duration-300 hover:border-main cursor-pointer" />
+          </Link>
         </div>
 
-        <div className="hideScroll h-[64vh] overflow-y-scroll">
+        <div className="hideScroll h-[64vh] mb-4 overflow-y-scroll">
           {cartItems.length > 0 ? (
             cartItems.map((food) => {
               return (
@@ -45,23 +40,26 @@ const Cart = ({ show, set }) => {
               );
             })
           ) : (
-            <p className="text-darkgray mt-56">Your cart is empty!</p>
+            <p className="text-darkgray text-center mt-56">
+              Your cart is empty!
+            </p>
           )}
         </div>
 
-        <div className="absolute bottom-0">
+        <div>
           <h3 className="text-left font-semibold text-darkgray">
             Items : {totalQty}
           </h3>
           <h3 className="text-left font-semibold text-darkgray">
             Total Amount : ${totalPrice}
           </h3>
-          <hr className="text-darkgray my-2 w-[90vw] lg:w-[24.5vw]" />
-          <button className="bg-[#10bb00] w-full font-semibold px-3 text-white py-2 rounded-lg mb-20">
+          <hr className="text-darkgray my-2 w-full" />
+          <button className="bg-main lg:bg-[#d85600] w-full font-semibold text-white py-2 lg:px-5 rounded-lg">
             Process to Payment
           </button>
         </div>
       </div>
+      <img className="hidden lg:block w-1/2 h-auto" src={FoodOrderImg} alt="food order image" />
     </div>
   );
 };

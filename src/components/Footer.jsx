@@ -9,7 +9,7 @@ const Footer = () => {
 
   return (
     <div>
-      <div className="flex flex-wrap gap-6 lg:gap-0 justify-start text-start lg:justify-between mt-12">
+      <div className="flex flex-wrap gap-6 w-full lg:gap-0 justify-start text-start lg:justify-between mt-12">
         <div className="flex flex-col gap-4 w-fit">
           <Link to="/">
             <img className="w-24" src={myLogo} alt="foodie-logo" />
@@ -92,7 +92,7 @@ const Footer = () => {
       </div>
 
       <div>
-        <p className="text-xs lg:text-sm mt-5">
+        <p className="text-xs text-center lg:text-sm py-5">
           Copyright &copy; {currentYear} Foodie. All Rights Reserved{" "}
         </p>
       </div>

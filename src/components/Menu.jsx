@@ -24,7 +24,7 @@ const Menu = () => {
   const selectedCategory = useSelector((state) => state.category.category);
 
   return (
-    <div className="mt-14">
+    <div className="mt-14 w-full">
       <span className="text-main tracking-widest text-xs font-medium text-left">
         OUR ITEMS
       </span>
