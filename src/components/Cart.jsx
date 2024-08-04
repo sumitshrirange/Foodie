@@ -16,7 +16,7 @@ const Cart = () => {
   );
 
   return (
-    <div className="w-full lg:flex items-center justify-evenly">
+    <div className="w-full lg:flex items-center mt-5 lg:mt-0 justify-evenly">
       <div className="lg:w-[450px] py-5">
         <div className="flex justify-between items-center my-2">
         <span className="text-main lg:text-[#d65600] tracking-wide text-sm lg:mb-3 lg:ml-48 font-medium">MY ORDER</span>

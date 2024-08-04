@@ -22,7 +22,7 @@ const Header = () => {
 
   return (
     <header>
-      <nav className="w-full flex items-center justify-between">
+      <nav className="w-full fixed lg:static bg-[#ffffff77] backdrop-blur-md left-0 px-4 lg:px-0 lg:py-0 py-2 top-0 flex items-center justify-between">
         <Link to={""}>
           <img className="w-24 cursor-pointer" src={myLogo} alt="foodie-logo" />
         </Link>
